@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1 class="title">Financial Portfolio Manager</h1> 
+    </div>
+    <div class="header-right">
+      <ul class="nav-menu">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><button class="logout-button" id="logout">Logout</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container"> 
+    <main>
+      <h1>Welcome to your Dashboard!</h1>
+
+      <section id="account-overview">
+        <h2>Account Overview</h2>
+        <p>Total Balance: <span id="total-balance">₹0.00</span></p>
+        <p>CURRENT BALANCE:<span id="current-balance">₹0.00</p>
+      </section>
+
+      <section id="add-asset">
+        <h2>Add New Asset</h2>
+        <form id="assetForm" class="asset-form">
+          <div class="input-group">
+            <label for="asset-name">Asset Name:</label>
+            <input type="text" id="assetName" class="input-field" placeholder="Asset Name" name="assetName" required />
+          </div>
+          <div class="input-group">
+            <label for="asset-value">Asset Value (INR):</label>
+            <input type="number" id="assetAmount" class="input-field" placeholder="Asset Value" name="assetAmount" required />
+          </div>
+          <button class="button">Add Asset</button>
+        </form>
+      </section>
+
+      <section id="portfolio-chart">
+        <h2>Your Portfolio</h2>
+        <div class="chart-container">
+          <canvas id="portfolioChart"></canvas>
+          <canvas id="pieChart"></canvas> 
+        </div>
+      </section>
+
+      <section id="transaction-history">
+        <h2>Transaction History</h2>
+        <table id="transaction-table">
+          <thead>
+            <tr>
+              <th>Asset Name</th>
+              <th>Date Added</th>
+              <th>Amount (INR)</th>
+            </tr>
+          </thead>
+          <tbody id="transaction-list"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Follow us on:</p>
+    <div class="social-links">
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

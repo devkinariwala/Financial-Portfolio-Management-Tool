@@ -1,0 +1,152 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('signinbg1.jpg'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6); /* Increased transparency (lowered opacity) */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-top: 10%;
+}
+
+/* Right Section */
+.right-section, .left-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section {
+  color: #fff;
+  order: -1; /* Swap the order with left-section */
+}
+
+.right-section .signup-text {
+  font-size: 35px;
+  font-weight: bold;
+  color: white; /* Bright text color */
+}
+
+/* Left Section */
+.left-section {
+  background-image: url('signinbg2.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Set text color to white */
+}
+
+.password-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ddd;
+}
+
+.eye-icon:hover {
+  color: #ffcc00;
+}
+
+/* Input Fields */
+.input-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.netid{
+  padding-top: 40px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: white;
+}
+
+/* Buttons */
+.arrow-btn, .signup-btn {
+  width: auto;
+  min-width: 200px;
+  padding: 12px 20px;
+  border: none;
+  background-color: #007bff; /* Set Sign In button color to blue */
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px auto;
+  transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover, .signup-btn:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .left-section, .right-section {
+    padding: 20px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .arrow-btn, .signup-btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
